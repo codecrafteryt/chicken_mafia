@@ -1,5 +1,5 @@
 import 'package:chicken_mafia/data/helper/get_di.dart';
-import 'package:chicken_mafia/views/splash_screen/splash_screen.dart';
+import 'package:chicken_mafia/views/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,7 +8,7 @@ import 'package:get/get_navigation/src/routes/transitions_type.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  DependencyInjection.init();
+  await DependencyInjection.init();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
@@ -24,15 +24,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     ScreenUtil.init(context);
     return ScreenUtilInit(
-        designSize: const Size(375, 880),
-        minTextAdapt: false,
-        splitScreenMode: false,
-        builder: (_, child) {
-          return GetMaterialApp(
-            debugShowCheckedModeBanner: false,
-            defaultTransition: Transition.leftToRight,
-            home: const SplashScreen(),
-          );
-        });
+      designSize: const Size(375, 880),
+      minTextAdapt: false,
+      splitScreenMode: false,
+      builder: (_, child) {
+        return GetMaterialApp(
+          debugShowCheckedModeBanner: false,
+          defaultTransition: Transition.rightToLeft,
+          home: const HomeScreen(),
+        );
+      },
+    );
   }
 }

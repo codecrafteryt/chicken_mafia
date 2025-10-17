@@ -45,32 +45,44 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final effectiveBgColor = isDisabled
-        ? Colors.grey.shade800
-        : (backgroundColor ?? const Color(0xFF1C1C1E));
+    final effectiveBgColor =
+        isDisabled
+            ? Colors.grey.shade800
+            : (backgroundColor ?? const Color(0xFF1C1C1E));
 
-    return Column(
-      children: [
-        CustomButton(
-          text: "Track Library",
-          width: double.infinity,
-          backgroundColor: const Color(0xFF1E1E1E),
-          borderColor: const Color(0xFF2C2C2E),
-          textColor: Colors.white70,
-          fontSize: 18,
-          borderRadius: 20,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.4),
-              offset: const Offset(0, 6),
-              blurRadius: 15,
+    return Container(
+      width: width,
+      height: height,
+      decoration: BoxDecoration(
+        color: effectiveBgColor,
+        borderRadius: BorderRadius.circular(borderRadius),
+        border:
+            borderColor != null
+                ? Border.all(color: borderColor!, width: borderWidth)
+                : null,
+        boxShadow: boxShadow,
+      ),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: isDisabled ? null : onPressed,
+          borderRadius: BorderRadius.circular(borderRadius),
+          child: Container(
+            padding: padding,
+            child: Center(
+              child: Text(
+                text,
+                style: TextStyle(
+                  color: textColor ?? Colors.white,
+                  fontSize: fontSize,
+                  fontWeight: fontWeight,
+                ),
+                textAlign: TextAlign.center,
+              ),
             ),
-          ],
-          onPressed: () {
-            debugPrint("Track Library clicked");
-          },
+          ),
         ),
-      ],
+      ),
     );
   }
 }

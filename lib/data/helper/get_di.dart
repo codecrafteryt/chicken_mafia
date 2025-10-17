@@ -12,8 +12,9 @@ import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class DependencyInjection {
-  static void init() async {
+  static Future<void> init() async {
     final sharedPreferences = await SharedPreferences.getInstance();
+    Get.put<SharedPreferences>(sharedPreferences);
     //Get.lazyPut(() => SearchesController(searchRepo: Get.find(), sharedPreferences: Get.find(),), fenix: true);
   }
 }
