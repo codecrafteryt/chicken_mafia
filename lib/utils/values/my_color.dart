@@ -19,6 +19,25 @@ class MyColors {
   static const Color lightRed = Color.fromRGBO(254, 236, 236, 1);
   static const Color darkGrey = Color.fromRGBO(15, 20, 29, 1);
   static const Color lightestGrey = Color.fromRGBO(77, 93, 121, 1);
+  // Green button
+  static const Color lightBtnGreen = Color.fromRGBO(75, 246, 176, 1);
+  static const Color darkBtnGreen = Color.fromRGBO(18, 163, 103, 1);
+  static const Color darkestBtnGreen = Color.fromRGBO(10, 141, 85, 1);
+  static const Color lightBtnBgGreen = Color.fromRGBO(24, 178, 115, 1);
+  static const Color darkBtnBgGreen = Color.fromRGBO(10, 139, 84, 1);
+  // black button
+  static const Color lightBtnBlack = Color.fromRGBO(53, 63, 84, 1);
+  static const Color darkBtnBlack = Color.fromRGBO(15, 27, 36, 1);
+  static const Color darkestBtnBlack = Color.fromRGBO(15, 20, 29, 1);
+  static const Color lightBtnBgBlack = Color.fromRGBO(24, 30, 40, 1);
+  static const Color darkBtnBgBlack = Color.fromRGBO(16, 20, 29, 1);
+
+
+
+
+
+
+
   // Secondary Colors
   static const Color secondaryLight =
   Color(0xFFFFE082); // rgba(255, 224, 130, 1)
