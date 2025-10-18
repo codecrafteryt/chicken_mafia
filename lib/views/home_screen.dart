@@ -98,7 +98,7 @@ class HomeScreen extends StatelessWidget {
                       MyColors.darkBtnBlack,
                       MyColors.darkestBtnBlack,
                     ],
-                      begin: AlignmentGeometry.topLeft,
+                      begin: Alignment.topLeft,
                   ),
                   boxShadow: [
                     BoxShadow(
@@ -128,7 +128,7 @@ class HomeScreen extends StatelessWidget {
                       Color.fromRGBO(18, 62, 62, 1),
                       Color.fromRGBO(12, 53, 51, 1),
                     ],
-                    begin: AlignmentGeometry.topLeft
+                    begin: Alignment.topLeft
                 ),
                 backgroundGradient: const LinearGradient(
                   colors: [

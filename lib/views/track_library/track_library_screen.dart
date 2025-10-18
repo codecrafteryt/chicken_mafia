@@ -23,13 +23,13 @@ class TrackLibraryScreen extends StatelessWidget {
           ),
           leading: CircularTopButton(
             size: 60,
-            borderGradient: const LinearGradient(
+            borderGradient: LinearGradient(
                 colors: [
                   Color.fromRGBO(89, 157, 156, 1),
                   Color.fromRGBO(18, 62, 62, 1),
                   Color.fromRGBO(12, 53, 51, 1),
                 ],
-                begin: AlignmentGeometry.topLeft
+                begin: Alignment.topLeft
             ),
             backgroundGradient: const LinearGradient(
               colors: [
@@ -52,7 +52,7 @@ class TrackLibraryScreen extends StatelessWidget {
                     Color.fromRGBO(18, 62, 62, 1),
                     Color.fromRGBO(12, 53, 51, 1),
                   ],
-                  begin: AlignmentGeometry.topLeft
+                  begin: Alignment.topLeft
               ),
               backgroundGradient: const LinearGradient(
                 colors: [
