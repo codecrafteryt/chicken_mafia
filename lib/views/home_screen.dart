@@ -7,7 +7,6 @@
   Description: Home Screen
 */
 
-import 'package:chicken_mafia/utils/extensions/extensions.dart';
 import 'package:chicken_mafia/utils/values/my_images.dart';
 import 'package:chicken_mafia/views/track_library/track_library_screen.dart';
 import 'package:chicken_mafia/views/widgets/top_button.dart';
@@ -53,21 +52,21 @@ class HomeScreen extends StatelessWidget {
                 CustomButton(
                   text: "Start Game",
                   width: double.infinity,
-                  backgroundGradient: LinearGradient(colors: [
-                    MyColors.lightBtnBgGreen,
-                    MyColors.darkBtnBgGreen
-                  ]),
+                  backgroundGradient: LinearGradient(
+                    colors: [MyColors.lightBtnBgGreen, MyColors.darkBtnBgGreen],
+                  ),
                   borderColor: const Color(0xFF2C2C2E),
                   textColor: Colors.white70,
                   fontSize: 18,
                   borderRadius: 20,
-                  borderGradient: LinearGradient(
+                  borderGradient: RadialGradient(
                     colors: [
                       MyColors.lightBtnGreen,
                       MyColors.darkBtnGreen,
                       MyColors.darkestBtnGreen,
                     ],
-                    begin: Alignment.topLeft,
+                    center: Alignment(-0.8, -1.0),
+                    radius: 2.3,
                   ),
                   boxShadow: [
                     BoxShadow(
@@ -76,29 +75,27 @@ class HomeScreen extends StatelessWidget {
                       blurRadius: 15,
                     ),
                   ],
-                  onPressed: () {
-
-                  },
+                  onPressed: () {},
                 ),
                 const SizedBox(height: 25),
                 CustomButton(
                   text: "Track Library",
                   width: double.infinity,
-                  backgroundGradient: LinearGradient(colors: [
-                    MyColors.lightBtnBgBlack,
-                    MyColors.darkBtnBgBlack
-                  ]),
+                  backgroundGradient: LinearGradient(
+                    colors: [MyColors.lightBtnBgBlack, MyColors.darkBtnBgBlack],
+                  ),
                   borderColor: const Color(0xFF2C2C2E),
                   textColor: Colors.white70,
                   fontSize: 18,
                   borderRadius: 20,
-                  borderGradient: LinearGradient(
+                  borderGradient: RadialGradient(
                     colors: [
                       MyColors.lightBtnBlack,
                       MyColors.darkBtnBlack,
                       MyColors.darkestBtnBlack,
                     ],
-                      begin: Alignment.topLeft,
+                    center: Alignment(-0.8, -1.0),
+                    radius: 2.3,
                   ),
                   boxShadow: [
                     BoxShadow(
@@ -108,7 +105,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                   onPressed: () {
-                    Get.to(() => TrackLibraryScreen(),);
+                    Get.to(() => TrackLibraryScreen());
                   },
                 ),
               ],
@@ -123,26 +120,23 @@ class HomeScreen extends StatelessWidget {
               child: CircularTopButton(
                 size: 60,
                 borderGradient: const LinearGradient(
-                    colors: [
-                      Color.fromRGBO(89, 157, 156, 1),
-                      Color.fromRGBO(18, 62, 62, 1),
-                      Color.fromRGBO(12, 53, 51, 1),
-                    ],
-                    begin: Alignment.topLeft
+                  colors: [
+                    MyColors.lightBtnGreen,
+                    MyColors.darkBtnGreen,
+                    MyColors.darkestBtnGreen,
+                  ],
+                  begin: Alignment.topLeft,
                 ),
                 backgroundGradient: const LinearGradient(
                   colors: [
-                    Color.fromRGBO(25, 75, 77, 1),
-                    Color.fromRGBO(14, 53, 50, 1),
+                    MyColors.lightBtnBgGreen,
+                    MyColors.darkBtnBgGreen,
                   ],
                 ),
-                child: Image.asset("assets/images/i.png",
-                height: 15,
-                ),
+                child: Image.asset("assets/images/i.png", height: 15),
                 onPressed: () {
                   debugPrint("Circular button tapped!");
                 },
-
               ),
             ),
           ),

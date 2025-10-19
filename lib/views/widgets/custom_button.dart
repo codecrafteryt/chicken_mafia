@@ -49,9 +49,10 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final effectiveBgColor = isDisabled
-        ? Colors.grey.shade800
-        : (backgroundColor ?? const Color(0xFF1C1C1E));
+    final effectiveBgColor =
+        isDisabled
+            ? Colors.grey.shade800
+            : (backgroundColor ?? const Color(0xFF1C1C1E));
 
     // If there's a gradient border, wrap in a gradient container
     if (borderGradient != null && !isDisabled) {
@@ -84,6 +85,7 @@ class CustomButton extends StatelessWidget {
                       color: textColor ?? Colors.white,
                       fontSize: fontSize,
                       fontWeight: fontWeight,
+                      fontFamily: 'Manrope',
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -103,9 +105,10 @@ class CustomButton extends StatelessWidget {
         color: backgroundGradient == null ? effectiveBgColor : null,
         gradient: backgroundGradient,
         borderRadius: BorderRadius.circular(borderRadius),
-        border: borderColor != null
-            ? Border.all(color: borderColor!, width: borderWidth)
-            : null,
+        border:
+            borderColor != null
+                ? Border.all(color: borderColor!, width: borderWidth)
+                : null,
         boxShadow: boxShadow,
       ),
       child: Material(
