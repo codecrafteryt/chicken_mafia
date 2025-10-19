@@ -84,8 +84,7 @@ class TrackLibraryScreen extends StatelessWidget {
               color: Color.fromRGBO(173, 249, 198, 1),
             ),
             onPressed: () {
-              Get.to(() => RulesScreen1());
-              //_showAddTrackMenu(context, controller);
+              _showAddTrackMenu(context, controller);
             },
           ),
         ],

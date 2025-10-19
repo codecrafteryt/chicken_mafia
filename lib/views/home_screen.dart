@@ -8,6 +8,7 @@
 */
 
 import 'package:chicken_mafia/utils/values/my_images.dart';
+import 'package:chicken_mafia/views/rules/rule1.dart';
 import 'package:chicken_mafia/views/track_library/track_library_screen.dart';
 import 'package:chicken_mafia/views/widgets/top_button.dart';
 import 'package:flutter/material.dart';
@@ -135,7 +136,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 child: Image.asset("assets/images/i.png", height: 15),
                 onPressed: () {
-                  debugPrint("Circular button tapped!");
+                  Get.to(() => RulesScreen1());
                 },
               ),
             ),
